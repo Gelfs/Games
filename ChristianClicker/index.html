@@ -62,7 +62,7 @@
     <h1> <span id = "winner">Christian Clicker</span></h1>
     <p>This is a very simple clicker game. </p>
     <p><b>NOTE: If you refresh this page you will lose all your progress.</b></p>
-    <img src = "/ChristianClicker/images/cross.png" onClick = "add()" class = "button" >
+    <img src = "/Games/ChristianClicker/images/cross.png" onClick = "add()" class = "button" >
     
     <p>Crosses clicked: <span id = "counter">0</span></p>
     <p>Crosses/second: <span id = "casdisplay">0</span></p>
@@ -96,17 +96,6 @@
     <br>
     <p>--- Jesus --- (50,000,000):
     <button class="button-74" role="button" onClick = "win()">Buy!</button></p>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488873320851335"
-     crossorigin="anonymous"></script>
-     <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8488873320851335"
-     data-ad-slot="9131656501"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     
    </body>
 
@@ -264,13 +253,13 @@
     }
     function win(){
         if (clicks >= 50000000){
-            location.replace("/ChristianClicker/win")
+            location.replace("/Games/ChristianClicker/win")
         } else {
             alert("Nice try. You are not winning that easy.")
         }
     }
     function Terms(){
-        window.open("/ChristianClicker/terms-of-service", target = "_blank");
+        window.open("/Games/ChristianClicker/terms-of-service", target = "_blank");
     }
 </script>
 <br>
