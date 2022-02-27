@@ -1,0 +1,279 @@
+<html>
+<head>
+    <title>Christian Clicker</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488873320851335"
+     crossorigin="anonymous"></script>
+</head>
+<head>
+<style>
+    h1 {color: blue; font-family: Comic Sans MS; text-align: center}
+    P {color: blue; font-family: Comic Sans MS; text-align: left}
+    img {display: block; margin-left: 675px; margin-right: auto}
+    body {background-image: url(https://airwallpaper.com/wp-content/uploads/wall003/Heaven-Backgrounds-scaled.jpg); background-repeat: repeat;}
+    
+    .button {
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+
+    }
+
+
+
+    .button:active {
+        transform: translateY(4px);
+    }
+    .button-74 {
+        background-color: #fbeee0;
+        border: 2px solid #422800;
+        border-radius: 30px;
+        box-shadow: #422800 2px 2px 0 0;
+        color: #422800;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 100;
+        font-size: 10px;
+        padding: 0 2px;
+        line-height: 20px;
+        width: 30px;
+        text-align: left;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-74:hover {
+        background-color: #fff;
+    }
+
+    .button-74:active {
+        box-shadow: #422800 2px 2px 0 0;
+        transform: translate(2px, 2px);
+    }
+
+</style>
+</head>
+
+<body>
+    <embed name="Music" src="/music/Music.mp3" loop="false" hidden="true" autostart="true">
+    <h1> <span id = "winner">Christian Clicker</span></h1>
+    <p>This is a very simple clicker game. </p>
+    <p><b>NOTE: If you refresh this page you will lose all your progress.</b></p>
+    <img src = "/ChristianClicker/images/cross.png" onClick = "add()" class = "button" >
+    
+    <p>Crosses clicked: <span id = "counter">0</span></p>
+    <p>Crosses/second: <span id = "casdisplay">0</span></p>
+    <br>
+    <br>
+    <br>
+    <p>----------- Shop -----------</p>
+    <p>Buy a Bible (<span id = "accostdisplay">15</span>) 1C/s:
+    <button class="button-74" role="button" onClick = "addAC()">Buy!</button> </p>
+    <p>Sell (<span id = "sellacdisplay">0</span>):
+    <button class="button-74" role="button" onClick = "sellAC()">Sell!</button>
+    <p>Bibles owned: <span id = "autodisplay">0</span></p>
+    <p>---</p>
+    <p>Buy a Priest (<span id = "Priestcostdisplay">500</span>) 5C/s:
+    <button class="button-74" role="button" onClick = "addpriest()">Buy!</button></p>
+    <p>Sell (<span id = "sellpriestdisplay">0</span>):
+    <button class="button-74" role="button" onClick = "sellPriest()">Sell!</button>
+    <p>Priests owned: <span id = "Priestdisplay">0</span></p>
+    <p>---</p>
+    <p>Buy a Savior (<span id = "saviorcostdisplay">2000</span>) 10C/s:
+    <button class="button-74" role="button" onClick = "addsavior()">Buy!</button></p>
+    <p>Saviors owned: <span id = "Saviordisplay">0</span></p>
+    <p>---</p>
+    <p>Buy a Church (<span id = "churchcostdisplay">5000</span>) 100C/s:
+    <button class="button-74" role="button" onClick = "addchurch()">Buy!</button></p>
+    <p>Churches owned: <span id = "Churchdisplay">0</span></p>
+    <p>---</p>
+    <p>Holy Multiplier (<span id = "multipliercost">500</span>):
+    <button class="button-74" role="button" onClick = "addmultiplier()">Buy!</button></p>
+    <p>Crosses per click: <span id = "multiplierdisplay">1</span></p>
+    <br>
+    <p>--- Jesus --- (50,000,000):
+    <button class="button-74" role="button" onClick = "win()">Buy!</button></p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488873320851335"
+     crossorigin="anonymous"></script>
+     <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8488873320851335"
+     data-ad-slot="9131656501"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+   </body>
+
+
+<script>
+    setInterval(Autoclicker, 800);
+    setInterval(Priest, 800);
+    setInterval(Savior, 800);
+    setInterval(Church, 800);
+    var clicks = 0
+    var cas = 0
+    var Autoclick = 0
+    var accost = 15
+    var Priests = 0
+    var Priestcost = 500
+    var Savior = 0
+    var Saviorcost = 2000
+    var multiplier = 1
+    var multipliercost = 500
+    var Church = 0
+    var Churchcost = 5000
+
+
+    function add(){
+        clicks = clicks + 1 * multiplier
+        counter.innerHTML = clicks;
+    }
+    function Autoclicker(){
+        clicks = clicks + Autoclick
+        counter.innerHTML = clicks
+    }
+    function addAC(){
+        if (clicks >= accost){
+            clicks = clicks - accost
+            counter.innerHTML = clicks
+            accost = accost + 15
+            accostdisplay.innerHTML = accost
+            sellaccost = accost / 2
+            sellaccost = Math.round(sellaccost)
+            sellacdisplay.innerHTML = sellaccost
+
+            Autoclick = Autoclick + 1
+            Autoclick = Autoclick
+            autodisplay.innerHTML = Autoclick
+            cas = cas + 1
+            casdisplay.innerHTML = cas
+
+        } else {
+            alert("Not very holy. :)")
+            clicks = clicks - clicks
+            counter.innerHTML = clicks
+        }
+
+    }
+    function sellAC(){
+        if (Autoclick >= 1){
+            Autoclick = Autoclick - 1
+            autodisplay.innerHTML = Autoclick
+            clicks = clicks + sellaccost
+            counter.innerHTML = clicks
+            cas = cas - 1
+            casdisplay.innerHTML = cas
+        } else {
+            alert("Good Try.")
+        }
+
+    }
+    function Priest(){
+        clicks = clicks + Priests * 5
+        counter.innerHTML = clicks
+    }
+    function addpriest(){
+        if (clicks >= Priestcost){
+            clicks = clicks - Priestcost
+            counter.innerHTML = clicks
+            Priestcost = Priestcost + 50
+            Priestcostdisplay.innerHTML = Priestcost
+            sellpriestcost = Priestcost / 2
+            sellpriestcost = Math.round(sellpriestcost)
+            sellpriestdisplay.innerHTML = sellpriestcost
+
+            Priests = Priests + 1
+            Priestdisplay.innerHTML = Priests
+            cas = cas + 5
+            casdisplay.innerHTML = cas
+        } else {
+            alert("Not very holy. :)")
+            clicks = clicks - clicks
+            counter.innerHTML = clicks
+        }
+    }
+    function sellPriest(){
+        if (Priests >= 1){
+            Priests = Priests - 1
+            Priestdisplay.innerHTML = Priests
+            clicks = clicks + sellpriestcost
+            counter.innerHTML = clicks
+            cas = cas - 5
+            casdisplay.innerHTML = cas
+        } else {
+            alert("Good Try.")
+        }
+
+    }
+
+    function Savior(){
+        clicks = clicks + Savior * 10
+        counter.innerHTML = clicks
+    }
+    function addsavior(){
+        if (clicks >= Saviorcost){
+            clicks = clicks - Saviorcost
+            counter.innerHTML = clicks
+            Saviorcost = Saviorcost + 250
+            saviorcostdisplay.innerHTML = Saviorcost
+            Savior = Savior + 1
+            Saviordisplay.innerHTML = Savior
+            cas = cas + 10
+            casdisplay.innerHTML = cas
+        } else {
+            alert("Not very holy. :)")
+            clicks = clicks - clicks
+            counter.innerHTML = clicks
+        }
+    }
+    function Church(){
+        clicks = clicks + Church * 100
+        counter.innerHTML = clicks
+    }
+    function addchurch(){
+        if (clicks >= Churchcost){
+            clicks = clicks - Churchcost
+            counter.innerHTML = clicks
+            Churchcost = Churchcost + 500
+            churchcostdisplay.innerHTML = Churchcost
+            Church = Church + 1
+            Churchdisplay.innerHTML = Church
+            cas = cas + 100
+            casdisplay.innerHTML = cas
+        } else {
+            alert("Not very holy. :)")
+            clicks = clicks - clicks
+            counter.innerHTML = clicks
+        }
+    }
+
+
+    function addmultiplier(){
+        if (clicks >= multipliercost){
+            clicks = clicks - multipliercost
+            counter.innerHTML = clicks
+            multiplier = multiplier + 1
+            multiplierdisplay.innerHTML = multiplier
+        }
+    }
+    function win(){
+        if (clicks >= 50000000){
+            location.replace("/ChristianClicker/win")
+        } else {
+            alert("Nice try. You are not winning that easy.")
+        }
+    }
+    function Terms(){
+        window.open("/ChristianClicker/terms-of-service", target = "_blank");
+    }
+</script>
+<br>
+    <p>Information and Terms and Conditions:
+    <button class="button-74" role="button" onClick = "Terms()">Read</button></p>
+</html>
