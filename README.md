@@ -1,2 +1,0 @@
-# Games
-HTML Games
